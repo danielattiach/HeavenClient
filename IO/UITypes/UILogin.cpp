@@ -83,12 +83,12 @@ namespace ms
 
 		background = ColorBox(dimension.x(), dimension.y(), Color::Name::BLACK, 1.0f);
 
-		Point<int16_t> textbox_pos = signboard_pos + Point<int16_t>(-68, -92);
-		Point<int16_t> textbox_dim = Point<int16_t>(145, 23);
+		Point<int16_t> textbox_pos = signboard_pos + Point<int16_t>(-68, -98);
+		Point<int16_t> textbox_dim = Point<int16_t>(145, 20);
 		int16_t textbox_limit = 12;
 
 #pragma region Account
-		account = Textfield(Text::Font::A13M, Text::Alignment::LEFT, Color::Name::JAMBALAYA, Rectangle<int16_t>(textbox_pos, textbox_pos + textbox_dim), textbox_limit);
+		account = Textfield(Text::Font::A13M, Text::Alignment::LEFT, Color::Name::WHITE, Rectangle<int16_t>(textbox_pos, textbox_pos + textbox_dim), textbox_limit);
 
 		account.set_key_callback
 		(
@@ -111,9 +111,9 @@ namespace ms
 #pragma endregion
 
 #pragma region Password
-		textbox_pos.shift_y(28);
+		textbox_pos.shift_y(30);
 
-		password = Textfield(Text::Font::A13M, Text::Alignment::LEFT, Color::Name::JAMBALAYA, Rectangle<int16_t>(textbox_pos, textbox_pos + textbox_dim), textbox_limit);
+		password = Textfield(Text::Font::A13M, Text::Alignment::LEFT, Color::Name::WHITE, Rectangle<int16_t>(textbox_pos, textbox_pos + textbox_dim), textbox_limit);
 
 		password.set_key_callback
 		(

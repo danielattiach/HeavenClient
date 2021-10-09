@@ -33,7 +33,7 @@ namespace ms
 	{
 		textlabel = Text(font, alignment, text_color, "", 0, false);
 		marker = ColorLine(marker_height, text_color, 1.0f, true);
-		boundsoutline = ColorBox(bounds.width(), bounds.height(), Color::Name::RED, 0.5f);
+		boundsoutline = ColorBox(bounds.width(), bounds.height(), Color::Name::BLACK, 0.0f);
 
 		text = "";
 		markerpos = 0;
