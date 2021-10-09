@@ -36,7 +36,7 @@
 
 namespace ms
 {
-	UILogin::UILogin() : UIElement(Point<int16_t>(0, 0), Point<int16_t>(800, 600)), signboard_pos(Point<int16_t>(389, 333))
+	UILogin::UILogin() : UIElement(Point<int16_t>(0, 0), Point<int16_t>(800, 600)), signboard_pos(Point<int16_t>(510, 333))
 	{
 		LoginStartPacket().dispatch();
 
@@ -70,8 +70,8 @@ namespace ms
 		sprites.emplace_back(frame, Point<int16_t>(400, 300));
 		sprites.emplace_back(Common["frame"], Point<int16_t>(400, 300));
 
-		buttons[Buttons::BT_LOGIN] = std::make_unique<MapleButton>(Title["BtLogin"], Point<int16_t>(470, 240));
-		buttons[Buttons::BT_SAVEID] = std::make_unique<MapleButton>(Title["BtLoginIDSave"], signboard_pos + Point<int16_t>(-89, 5));
+		buttons[Buttons::BT_LOGIN] = std::make_unique<MapleButton>(Title["BtLogin"], signboard_pos + Point<int16_t>(85, -106));
+		buttons[Buttons::BT_SAVEID] = std::make_unique<MapleButton>(Title["BtLoginIDSave"], signboard_pos + Point<int16_t>(-90, -25));
 		buttons[Buttons::BT_IDLOST] = std::make_unique<MapleButton>(Title["BtLoginIDLost"], signboard_pos + Point<int16_t>(-17, 5));
 		buttons[Buttons::BT_PASSLOST] = std::make_unique<MapleButton>(Title["BtPasswdLost"], signboard_pos + Point<int16_t>(55, 5));
 		buttons[Buttons::BT_REGISTER] = std::make_unique<MapleButton>(Title["BtNew"], signboard_pos + Point<int16_t>(-101, 25));
@@ -83,8 +83,8 @@ namespace ms
 
 		background = ColorBox(dimension.x(), dimension.y(), Color::Name::BLACK, 1.0f);
 
-		Point<int16_t> textbox_pos = signboard_pos + Point<int16_t>(-100, -51);
-		Point<int16_t> textbox_dim = Point<int16_t>(160, 23);
+		Point<int16_t> textbox_pos = signboard_pos + Point<int16_t>(-68, -92);
+		Point<int16_t> textbox_dim = Point<int16_t>(145, 23);
 		int16_t textbox_limit = 12;
 
 #pragma region Account
@@ -111,7 +111,7 @@ namespace ms
 #pragma endregion
 
 #pragma region Password
-		textbox_pos.shift_y(26);
+		textbox_pos.shift_y(28);
 
 		password = Textfield(Text::Font::A13M, Text::Alignment::LEFT, Color::Name::JAMBALAYA, Rectangle<int16_t>(textbox_pos, textbox_pos + textbox_dim), textbox_limit);
 
@@ -168,17 +168,19 @@ namespace ms
 
 		UIElement::draw(alpha);
 
-		version.draw(position + Point<int16_t>(707, 4));
+		version.draw(position + Point<int16_t>(680, 4));
 		account.draw(position + Point<int16_t>(5, 0));
 		password.draw(position + Point<int16_t>(5, 3));
 
+		/*
 		if (account.get_state() == Textfield::State::NORMAL && account.empty())
 			accountbg.draw(position + signboard_pos + Point<int16_t>(-100, -51));
 
 		if (password.get_state() == Textfield::State::NORMAL && password.empty())
 			passwordbg.draw(position + signboard_pos + Point<int16_t>(-100, -25));
+		*/
 
-		checkbox[saveid].draw(position + signboard_pos + Point<int16_t>(-101, 7));
+		checkbox[saveid].draw(position + signboard_pos + Point<int16_t>(-110, -25));
 	}
 
 	void UILogin::update()
