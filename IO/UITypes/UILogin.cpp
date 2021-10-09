@@ -71,12 +71,12 @@ namespace ms
 		sprites.emplace_back(Common["frame"], Point<int16_t>(400, 300));
 
 		buttons[Buttons::BT_LOGIN] = std::make_unique<MapleButton>(Title["BtLogin"], signboard_pos + Point<int16_t>(85, -106));
-		buttons[Buttons::BT_SAVEID] = std::make_unique<MapleButton>(Title["BtLoginIDSave"], signboard_pos + Point<int16_t>(-90, -25));
-		buttons[Buttons::BT_IDLOST] = std::make_unique<MapleButton>(Title["BtLoginIDLost"], signboard_pos + Point<int16_t>(-17, 5));
-		buttons[Buttons::BT_PASSLOST] = std::make_unique<MapleButton>(Title["BtPasswdLost"], signboard_pos + Point<int16_t>(55, 5));
-		buttons[Buttons::BT_REGISTER] = std::make_unique<MapleButton>(Title["BtNew"], signboard_pos + Point<int16_t>(-101, 25));
-		buttons[Buttons::BT_HOMEPAGE] = std::make_unique<MapleButton>(Title["BtHomePage"], signboard_pos + Point<int16_t>(-29, 25));
-		buttons[Buttons::BT_QUIT] = std::make_unique<MapleButton>(Title["BtQuit"], signboard_pos + Point<int16_t>(43, 25));
+		buttons[Buttons::BT_SAVEID] = std::make_unique<MapleButton>(Title["BtLoginIDSave"], signboard_pos + Point<int16_t>(-91, -27));
+		buttons[Buttons::BT_IDLOST] = std::make_unique<MapleButton>(Title["BtLoginIDLost"], signboard_pos + Point<int16_t>(20, -27));
+		buttons[Buttons::BT_PASSLOST] = std::make_unique<MapleButton>(Title["BtPasswdLost"], signboard_pos + Point<int16_t>(100, -27));
+		buttons[Buttons::BT_REGISTER] = std::make_unique<MapleButton>(Title["BtNew"], signboard_pos + Point<int16_t>(-113, 20));
+		buttons[Buttons::BT_HOMEPAGE] = std::make_unique<MapleButton>(Title["BtHomePage"], signboard_pos + Point<int16_t>(-13, 20));
+		buttons[Buttons::BT_QUIT] = std::make_unique<MapleButton>(Title["BtQuit"], signboard_pos + Point<int16_t>(86, 20));
 
 		checkbox[false] = Title["check"]["0"];
 		checkbox[true] = Title["check"]["1"];
@@ -180,7 +180,7 @@ namespace ms
 			passwordbg.draw(position + signboard_pos + Point<int16_t>(-100, -25));
 		*/
 
-		checkbox[saveid].draw(position + signboard_pos + Point<int16_t>(-110, -25));
+		checkbox[saveid].draw(position + signboard_pos + Point<int16_t>(-115, -27));
 	}
 
 	void UILogin::update()
