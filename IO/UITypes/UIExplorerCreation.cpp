@@ -25,8 +25,9 @@ namespace ms
 {
 	UIExplorerCreation::UIExplorerCreation() : UICommonCreation("000")
 	{
-		nl::node back = nl::nx::map001["Back"]["login.img"]["back"];
-		nl::node signboard = nl::nx::mapLatest["Obj"]["login.img"]["NewChar"]["signboard"]["2"];
+		// BALAK
+		nl::node back = nl::nx::map["Back"]["login.img"]["back"];
+		nl::node signboard = nl::nx::map["Obj"]["login.img"]["NewChar"]["signboard"]["0"];
 
 		sky = back["2"];
 		cloud = back["27"];

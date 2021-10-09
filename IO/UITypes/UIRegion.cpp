@@ -32,7 +32,8 @@ namespace ms
 	UIRegion::UIRegion() : UIElement(Point<int16_t>(0, 0), Point<int16_t>(800, 600))
 	{
 		nl::node Common = nl::nx::ui["Login.img"]["Common"];
-		nl::node frame = nl::nx::mapLatest["Obj"]["login.img"]["Common"]["frame"]["2"]["0"];
+		// BALAK
+		nl::node frame = nl::nx::map["Obj"]["login.img"]["Common"]["frame"]["0"]["0"];
 		nl::node Gateway = nl::nx::ui["Gateway.img"]["WorldSelect"];
 		nl::node na = Gateway["BtButton0"];
 		nl::node eu = Gateway["BtButton1"];

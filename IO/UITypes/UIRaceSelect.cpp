@@ -47,7 +47,8 @@ namespace ms
 		nl::node Common = Login["Common"];
 		nl::node RaceSelect = Login["RaceSelect_new"];
 
-		nl::node frame = nl::nx::mapLatest["Obj"]["login.img"]["Common"]["frame"]["2"]["0"];
+		// BALAK
+		nl::node frame = nl::nx::map["Obj"]["login.img"]["Common"]["frame"]["0"]["0"];
 
 		Point<int16_t> make_pos = RaceSelect["make"]["pos"];
 		Point<int16_t> make_posZero = RaceSelect["make"]["posZero"];

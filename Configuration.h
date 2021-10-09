@@ -36,7 +36,7 @@ namespace ms
 		// If something is missing, set the default value.
 		// Can be used for reloading
 		void load();
-		// Save the current settings 
+		// Save the current settings
 		void save() const;
 		// Get private member SHOW_FPS
 		bool get_show_fps() const;
@@ -225,7 +225,7 @@ namespace ms
 
 		const char* FILENAME = "Settings";
 		const char* TITLE = "MapleStory";
-		const char* VERSION = "221.1";
+		const char* VERSION = "0.83";
 		const char* LoginMusic = "BgmUI.img/Title";
 		const char* LoginMusicSEA = "BgmGL.img/OldMaple";
 		const char* LoginMusicNewtro = "BgmEvent2.img/Newtro_Login";
@@ -236,7 +236,7 @@ namespace ms
 		const char* RESETPIC = "https://www.nexon.com/account/en/login";
 		const char* CHARGENX = "https://billing.nexon.net/PurchaseNX";
 		const bool SHOW_FPS = false;
-		const bool SHOW_PACKETS = false;
+		const bool SHOW_PACKETS = true;
 		const bool AUTO_LOGIN = false;
 		const uint8_t auto_world = 0;
 		const uint8_t auto_channel = 0;
@@ -310,14 +310,14 @@ namespace ms
 	// Number from 0 to 100
 	struct BGMVolume : public Configuration::ByteEntry
 	{
-		BGMVolume() : ByteEntry("BGMVolume", "50") {}
+		BGMVolume() : ByteEntry("BGMVolume", "5") {}
 	};
 
 	// Sound Volume
 	// Number from 0 to 100
 	struct SFXVolume : public Configuration::ByteEntry
 	{
-		SFXVolume() : ByteEntry("SFXVolume", "50") {}
+		SFXVolume() : ByteEntry("SFXVolume", "5") {}
 	};
 
 	// Whether to save the last used account name

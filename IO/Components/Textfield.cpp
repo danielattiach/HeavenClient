@@ -305,6 +305,9 @@ namespace ms
 			int16_t cur_x = cursorpos.x();
 			int16_t cur_y = cursorpos.y();
 
+			std::cout << "x: " << cur_x << ", y: " << cur_y << std::endl;
+
+			/*
 			std::cout
 				<< "(" << lt_x << ", " << lt_y << ") != (" << rb_x << ", " << rb_y << ") && "
 				<< cur_x << " >= (" << lt_x << ") && "
@@ -313,6 +316,7 @@ namespace ms
 				<< cur_y << " <= (" << rb_y << ")"
 				<< std::endl
 				<< std::endl;
+			*/
 #endif
 
 			if (clicked && state == State::FOCUSED)

@@ -59,10 +59,11 @@ namespace ms
 		uint8_t regionid = Setting<DefaultRegion>::get().load();
 		set_region(regionid);
 
-		nl::node login = nl::nx::mapLatest["Obj"]["login.img"];
-		sprites.emplace_back(login["WorldSelect"]["default"]["0"], background_pos);
+		// BALAK
+		nl::node login = nl::nx::map["Obj"]["login.img"];
+		sprites.emplace_back(login["WorldSelect"]["signboard"]["0"], background_pos);
 
-		std::vector<std::string> backgrounds = { "16thNewtro" };
+		std::vector<std::string> backgrounds = {  }; // "16thNewtro"
 		size_t backgrounds_size = backgrounds.size();
 
 		if (backgrounds_size > 0)
@@ -80,7 +81,7 @@ namespace ms
 			}
 		}
 
-		sprites.emplace_back(login["Common"]["frame"]["2"]["0"], Point<int16_t>(400, 300));
+		sprites.emplace_back(login["Common"]["frame"]["0"]["0"], Point<int16_t>(400, 300));
 		sprites.emplace_back(Common["frame"], Point<int16_t>(400, 300));
 		sprites.emplace_back(Common["step"]["1"], Point<int16_t>(40, 0));
 

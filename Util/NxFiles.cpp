@@ -22,6 +22,7 @@
 
 #include <nlnx/node.hpp>
 #include <nlnx/nx.hpp>
+#include <iostream>
 
 namespace ms
 {
@@ -44,7 +45,7 @@ namespace ms
 				return Error(Error::Code::NLNX, message.c_str());
 			}
 
-			constexpr const char* POSTCHAOS_BITMAP = "Login.img/WorldSelect/BtChannel/layer:bg";
+			constexpr const char* POSTCHAOS_BITMAP = "Login.img/Common/frame";
 
 			if (nl::nx::ui.resolve(POSTCHAOS_BITMAP).data_type() != nl::node::type::bitmap)
 				return Error::Code::WRONG_UI_FILE;

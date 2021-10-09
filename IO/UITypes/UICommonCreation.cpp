@@ -52,7 +52,8 @@ namespace ms
 		nl::node board = CustomizeChar["board"];
 		nl::node genderSelect = CustomizeChar["genderSelect"];
 
-		nl::node frame = nl::nx::mapLatest["Obj"]["login.img"]["Common"]["frame"]["2"]["0"];
+		// BALAK
+		nl::node frame = nl::nx::map["Obj"]["login.img"]["Common"]["frame"]["0"]["0"];
 
 		sprites.emplace_back(createLimit["backgrnd"]);
 		sprites_gender_select.emplace_back(board["genderTop"], getGenderTopPos());

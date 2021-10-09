@@ -30,7 +30,7 @@ namespace ms
 	namespace WzFiles
 	{
 		// Number of needed files
-		constexpr uint8_t NUM_FILES = 18;
+		constexpr uint8_t NUM_FILES = 15;
 
 		// Names of the needed game files
 		constexpr std::array<const char*, NUM_FILES> filenames =
@@ -40,9 +40,9 @@ namespace ms
 			"Etc.wz",
 			"Item.wz",
 			"Map.wz",
-			"MapPretty.wz",	// From v167,
-			"MapLatest.wz",	// From latest,
-			"Map001.wz",	// From latest,
+			//"MapPretty.wz",	// From v167,
+			//"MapLatest.wz",	// From latest,
+			//"Map001.wz",	// From latest,
 			"Mob.wz",
 			"Morph.wz",
 			"Npc.wz",
@@ -182,7 +182,8 @@ namespace nl
 
 	namespace nx
 	{
-		static nl::node base, character, effect, etc, item, map, mapPretty, mapLatest, map001, mob, morph, npc, quest, reactor, skill, sound, string, tamingmob, ui;
+		//static nl::node base, character, effect, etc, item, map, mapPretty, mapLatest, map001, mob, morph, npc, quest, reactor, skill, sound, string, tamingmob, ui;
+		static nl::node base, character, effect, etc, item, map, mob, morph, npc, quest, reactor, skill, sound, string, tamingmob, ui;
 	}
 }
 #endif

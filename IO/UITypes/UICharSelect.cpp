@@ -96,15 +96,17 @@ namespace ms
 		world_sprites.emplace_back(selectedWorld["name"][world], worldpos - Point<int16_t>(8, 1));
 		world_sprites.emplace_back(selectedWorld["ch"][channel_id], worldpos - Point<int16_t>(0, 1));
 
-		nl::node map = nl::nx::map001["Back"]["login.img"];
+		// BALAK
+		nl::node map = nl::nx::map["Back"]["login.img"];
 		nl::node ani = map["ani"];
 
-		nl::node frame = nl::nx::mapLatest["Obj"]["login.img"]["Common"]["frame"]["2"]["0"];
+		// BALAK
+		nl::node frame = nl::nx::map["Obj"]["login.img"]["Common"]["frame"]["0"]["0"];
 
 		sprites.emplace_back(map["back"]["13"], Point<int16_t>(392, 297));
-		sprites.emplace_back(ani["17"], Point<int16_t>(151, 283));
-		sprites.emplace_back(ani["18"], Point<int16_t>(364, 251));
-		sprites.emplace_back(ani["19"], Point<int16_t>(191, 208));
+		sprites.emplace_back(ani["13"], Point<int16_t>(151, 283));
+		sprites.emplace_back(ani["14"], Point<int16_t>(364, 251));
+		sprites.emplace_back(ani["15"], Point<int16_t>(191, 208));
 		sprites.emplace_back(frame, Point<int16_t>(400, 300));
 		sprites.emplace_back(Common["frame"], Point<int16_t>(400, 300));
 		sprites.emplace_back(Common["step"]["2"], Point<int16_t>(40, 0));

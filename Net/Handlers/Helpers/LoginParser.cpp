@@ -183,7 +183,8 @@ namespace ms
 
 		while (mskeqslot != 0xFF)
 		{
-			look.maskedequips[mskeqslot] = recv.read_int();
+			int32_t thing = recv.read_int();
+			look.maskedequips[mskeqslot] = thing;
 			mskeqslot = recv.read_byte();
 		}
 

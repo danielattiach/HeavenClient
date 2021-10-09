@@ -25,7 +25,8 @@ namespace ms
 {
 	UIAranCreation::UIAranCreation() : UICommonCreation("2000")
 	{
-		nl::node back = nl::nx::map001["Back"]["login.img"]["back"];
+		// BALAK
+		nl::node back = nl::nx::map["Back"]["login.img"]["back"];
 
 		sky = back["2"];
 		cloud = back["27"];
